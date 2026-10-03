@@ -194,6 +194,21 @@ footer {
   .menu-item {
     font-size: 16px;
   }
+}.custom-cookie-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .custom-cookie-title {
+        font-size: 28px;
+        gap: 5px;
+    }
 }
 </style>
 </head>
@@ -252,10 +267,11 @@ footer {
 
 <!-- CUSTOMIZABLE COOKIES -->
 <section class="menu-section">
- <h2 style="white-space: nowrap;">Customizable Cookies ✨</h2>
+ <h2 class="custom-cookie-title">
+    <span>Customizable Cookies</span><span>✨</span>
+</h2>
 
   <div class="custom-note">
-    Build your own cookie.<br>
     <p>
     Build your own cookie.<br>
     Choose your favorite filling & toppings.<br>

@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Lilly’s Crumbs</title>
 
 <style>
@@ -13,113 +12,187 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #f8f3e9;
-  color: #56382b;
+  background: #fbf3e9;
+  color: #63483a;
   font-family: Georgia, "Times New Roman", serif;
-  padding: 24px 16px 50px;
+}
+
+.hero {
+  min-height: 100vh;
+  background: #f7e6d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 25px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 58px;
+  line-height: 1.1;
+  color: #63483a;
+}
+
+.tagline {
+  margin: 28px 0 55px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #8b6755;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  background: #8f6652;
+  color: white;
+  text-decoration: none;
+  padding: 15px 32px;
+  border-radius: 30px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #6f4e3e;
 }
 
 .page {
-  max-width: 760px;
+  max-width: 900px;
   margin: auto;
+  padding: 70px 25px;
 }
 
-h1 {
+header {
   text-align: center;
-  font-size: 42px;
-  margin: 20px 0 38px;
-  color: #56382b;
+  margin-bottom: 55px;
+}
+
+.logo-text {
+  font-size: 45px;
+  color: #63483a;
+  margin-bottom: 12px;
 }
 
 .menu-section {
-  background: #fffdf9;
-  border-radius: 38px;
-  padding: 34px 28px;
-  margin-bottom: 24px;
-  text-align: center;
-  box-shadow: 0 2px 12px rgba(86, 56, 43, 0.04);
+  background: #fffaf4;
+  padding: 35px 30px;
+  margin-bottom: 28px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(99,72,58,0.08);
 }
 
 .menu-section h2 {
-  font-size: 32px;
-  margin-bottom: 14px;
-  color: #56382b;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #63483a;
 }
 
-.description {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.options {
+.menu-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 9px 22px;
-  font-size: 17px;
-  line-height: 1.5;
+  padding: 15px 5px;
+  border-bottom: 1px solid #ead9ca;
+  font-size: 18px;
 }
 
-.options span::after {
-  content: "•";
-  margin-left: 22px;
+.menu-item:last-child {
+  border-bottom: none;
 }
 
-.options span:last-child::after {
-  content: "";
-  margin: 0;
+.menu-item span:first-child {
+  font-weight: 500;
 }
 
 .custom-note {
+  text-align: center;
   font-size: 17px;
-  margin-bottom: 16px;
-  font-style: italic;
+  line-height: 1.7;
+  color: #8b6755;
+  padding: 5px 10px 15px;
+}
+
+.sparkle {
+  font-size: 20px;
+}
+
+.about {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 650px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #7a5b4c;
+}
+
+.order {
+  text-align: center;
+  background: #f7e6d0;
+  padding: 50px 25px;
+  border-radius: 25px;
+  margin-top: 40px;
+}
+
+.order h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.order p {
+  margin-bottom: 25px;
+  font-size: 18px;
 }
 
 footer {
   text-align: center;
-  font-size: 13px;
-  margin-top: 35px;
-  color: #85695a;
+  padding: 35px 20px;
+  font-size: 14px;
+  color: #9a7866;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 600px) {
-
-  body {
-    padding: 18px 14px 40px;
+  .hero h1 {
+    font-size: 42px;
   }
 
-  h1 {
-    font-size: 34px;
-    margin-bottom: 28px;
+  .tagline {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+  }
+
+  .logo-text {
+    font-size: 36px;
   }
 
   .menu-section {
     padding: 28px 20px;
-    border-radius: 32px;
-    margin-bottom: 18px;
   }
 
   .menu-section h2 {
-    font-size: 27px;
-    margin-bottom: 12px;
+    font-size: 26px;
   }
 
-  .description,
-  .options,
-  .custom-note {
+  .menu-item {
     font-size: 16px;
-  }
-
-  .options {
-    gap: 7px 18px;
-  }
-
-  .options span::after {
-    margin-left: 18px;
   }
 }
 </style>
@@ -127,47 +200,36 @@ footer {
 
 <body>
 
-<div class="page">
-
-<h1>Our Menu</h1>
-
-<!-- BROWNIES -->
-<section class="menu-section">
-  <h2>Brownies</h2>
-  <p class="description">Rich, fudgy and chocolatey.</p>
-
-  <div class="options">
-    <span>Classic</span>
-    <span>Milk Chocolate</span>
-    <span>White Chocolate</span>
-    <span>Pistachio</span>
-  </div>
+<section class="hero">
+  <h1>Lilly’s Crumbs</h1>
+  <div class="tagline">LITTLE CRUMBS, BAKED BEAUTIFULLY</div>
+  <a href="#menu" class="button">See Our Menu</a>
 </section>
 
-<!-- BROOKIES -->
-<section class="menu-section">
-  <h2>Brookies</h2>
-  <p class="description">Brownie + cookie in one delicious bite.</p>
+<div class="page" id="menu">
 
-  <div class="options">
-    <span>Dark Chocolate</span>
-    <span>Milk Chocolate</span>
-    <span>White Chocolate</span>
-    <span>Pistachio</span>
-  </div>
-</section>
+<header>
+  <div class="logo-text">Lilly’s Crumbs</div>
+</header>
 
 <!-- COOKIES -->
 <section class="menu-section">
   <h2>Cookies</h2>
 
-  <div class="options">
+  <div class="menu-item">
     <span>Chocolate Chip</span>
+  </div>
+
+  <div class="menu-item">
     <span>Double Chocolate</span>
-    <span>Red Velvet</span>
-    <span>Vanilla</span>
+  </div>
+
+  <div class="menu-item">
     <span>Oreo</span>
-    <span>M&amp;M’s</span>
+  </div>
+
+  <div class="menu-item">
+    <span>M&amp;M’s Cookies</span>
   </div>
 </section>
 
@@ -175,29 +237,26 @@ footer {
 <section class="menu-section">
   <h2>Stuffed Cookies</h2>
 
-  <div class="options">
-    <span>Kinder</span>
-    <span>Oreo</span>
+  <div class="menu-item">
     <span>Lotus</span>
-    <span>KitKat</span>
+  </div>
+
+  <div class="menu-item">
     <span>Chocolate</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Kinder</span>
   </div>
 </section>
 
-<!-- CUSTOMIZABLE BROWNIES -->
+<!-- CUSTOMIZABLE COOKIES -->
 <section class="menu-section">
-  <h2>Customizable Brownies</h2>
+  <h2>Customizable Cookies <span class="sparkle">✨</span></h2>
 
-  <p class="custom-note">Choose your toppings ✨</p>
-
-  <div class="options">
-    <span>Kinder</span>
-    <span>Oreo</span>
-    <span>Lotus</span>
-    <span>KitKat</span>
-    <span>M&amp;M’s</span>
-    <span>Bananas</span>
-    <span>Berries</span>
+  <div class="custom-note">
+    Build your own cookie.<br>
+    Choose your favorite filling &amp; toppings.
   </div>
 </section>
 
@@ -205,19 +264,78 @@ footer {
 <section class="menu-section">
   <h2>Cinnamon Rolls</h2>
 
-  <div class="options">
-    <span>Classic</span>
-    <span>Kinder</span>
-    <span>Lotus</span>
-    <span>Chocolate</span>
+  <div class="menu-item">
+    <span>Classic Cinnamon</span>
   </div>
 </section>
+
+<!-- BROWNIES -->
+<section class="menu-section">
+  <h2>Brownies</h2>
+
+  <div class="menu-item">
+    <span>Classic Chocolate Brownie</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Brookie</span>
+  </div>
+</section>
+
+<!-- CUSTOMIZABLE BROWNIES -->
+<section class="menu-section">
+  <h2>Customizable Brownies <span class="sparkle">✨</span></h2>
+
+  <div class="menu-item">
+    <span>White Chocolate</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Dark Chocolate</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Milk Chocolate</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Pistachio</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Lotus</span>
+  </div>
+
+  <div class="menu-item">
+    <span>Add Fruit: Bananas · Berries</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Lilly’s Crumbs</h2>
+
+  <p>
+    Little treats, warm moments, and plenty of crumbs.
+    Everything at Lilly’s Crumbs is made to bring a little sweetness
+    to your day.
+  </p>
+</section>
+
+<!-- ORDER -->
+<section class="order">
+  <h2>Order With Us 🤎</h2>
+
+  <p>Send us a message on Instagram to place your order.</p>
+
+  <a href="#" class="button">Instagram</a>
+</section>
+
+</div>
 
 <footer>
   LILLY’S CRUMBS · 2026
 </footer>
-
-</div>
 
 </body>
 </html>
